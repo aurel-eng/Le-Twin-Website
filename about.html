@@ -1,44 +1,43 @@
-<!-- FILE: about.html -->
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
-
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>LE TWIN — About</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LE TWIN — About</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="index.html">LE TWIN</a>
-<nav class="main-nav">
-<a href="index.html">Home</a>
-<a href="menu.html">Menu</a>
-<a href="logo-based.html">Logo</a>
-<a href="graphics.html">Graphics</a>
-</nav>
-<button class="hamburger" aria-label="Open menu">☰</button>
-</div>
+  <a class="brand" href="index.html">LE TWIN</a>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="logo-based.html">Logo</a>
+    <a href="graphics.html">Graphics</a>
+  </nav>
+  <button class="hamburger" aria-label="Open menu">☰</button>
 </header>
 
-
 <main class="container">
-<h1 class="section-title">About LE TWIN</h1>
-<p class="lead">Started in 2024, LE TWIN focuses on simple, quality t-shirts for everyday wear. We design two collections: minimal logo-based tees and bold graphics. Every piece is available in M, L, XL. This site is a showcase only — no purchases yet.</p>
+  <h2 class="section-title">About LE TWIN</h2>
+  <p class="lead">Started in 2024, LE TWIN focuses on simple, quality t-shirts for everyday wear. We design two collections: minimal logo-based tees and bold graphics. Every piece is available in M, L, XL. This site is a showcase only — no purchases yet.</p>
 
-
-<h3 style="margin-top:18px">Want wholesale or collaboration?</h3>
-<p>Send us a message through the contact page. We respond within 48 business hours.</p>
+  <h3 style="margin-top:18px">Want wholesale or collaboration?</h3>
+  <p>Send us a message through the contact page. We respond within 48 business hours.</p>
 </main>
 
-
 <footer class="site-footer">
-<div class="container footer-inner">
-<div class="copyright">© LE TWIN — 2025</div>
-</div>
+  <div class="footer-inner">
+    <div>© LE TWIN — 2025</div>
+  </div>
 </footer>
-</body>
 
+<script>
+const hamb = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+if(hamb){
+  hamb.addEventListener('click', ()=> nav.classList.toggle('open'));
+}
+</script>
+</body>
 </html>
