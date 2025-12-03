@@ -1,84 +1,89 @@
-<!-- FILE: product.html -->
-<link rel="stylesheet" href="style.css">
-
-<div class="container header-inner">
-<a class="brand" href="index.html">LE TWIN</a>
-<nav class="main-nav">
-<a href="index.html">Home</a>
-<a href="menu.html">Menu</a>
-<a href="logo-based.html">Logo</a>
-<a href="graphics.html">Graphics</a>
-</nav>
-<button class="hamburger" aria-label="Open menu">☰</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LE TWIN — Product</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">LE TWIN</a>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="logo-based.html">Logo</a>
+    <a href="graphics.html">Graphics</a>
+  </nav>
+  <button class="hamburger" aria-label="Open menu">☰</button>
 </header>
 
+<main class="product-page">
+  <div class="product-left">
+    <img id="productImage" src="images/logo-black.jpg" alt="Product">
+  </div>
+  <div class="product-right">
+    <h1 id="productTitle">Product Name</h1>
+    <p class="muted">T-shirt — sizes M / L / XL</p>
 
-<main class="container product-page">
-<div class="product-left">
-<img id="productImage" src="images/logo-black.jpg" alt="Product">
-</div>
-<div class="product-right">
-<h1 id="productTitle">Product Name</h1>
-<p id="productSubtitle" class="muted">T-shirt — sizes M / L / XL</p>
+    <h4>Colors</h4>
+    <div class="color-row">
+      <button class="color-dot black" data-color="black"></button>
+      <button class="color-dot white" data-color="white"></button>
+      <button class="color-dot blue" data-color="blue"></button>
+      <button class="color-dot red" data-color="red"></button>
+    </div>
 
+    <h4 style="margin-top:14px">Sizes</h4>
+    <div class="size-row">
+      <button class="size">M</button>
+      <button class="size">L</button>
+      <button class="size">XL</button>
+    </div>
 
-<h4>Colors</h4>
-<div class="color-row">
-<button class="color-dot black" data-color="black" aria-label="Black"></button>
-<button class="color-dot white" data-color="white" aria-label="White"></button>
-<button class="color-dot blue" data-color="blue" aria-label="Blue"></button>
-<button class="color-dot red" data-color="red" aria-label="Red"></button>
-</div>
-
-
-<h4 style="margin-top:14px">Sizes</h4>
-<div class="size-row">
-<button class="size">M</button>
-<button class="size">L</button>
-<button class="size">XL</button>
-</div>
-
-
-<p class="muted" style="margin-top:14px">No checkout – showcase only. Use this page to show details and colors.</p>
-<a class="sub-cta" id="shareLink" href="#">Share this look</a>
-</div>
+    <p class="muted" style="margin-top:14px">No checkout — showcase only.</p>
+    <a class="sub-cta" id="shareLink" href="#">Share this look</a>
+  </div>
 </main>
 
-
 <script>
-// Basic client-side logic to pull simple query params and change product text/image
 function qs(name){
-const params = new URLSearchParams(window.location.search);
-return params.get(name);
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name);
 }
 const title = qs('name') || 'LE TWIN Tee';
 const color = qs('color') || 'black';
 const img = document.getElementById('productImage');
 const titleEl = document.getElementById('productTitle');
 
-
-// map color -> image file (fallbacks)
 const colorMap = {
-'black':'images/logo-black.jpg',
-'white':'images/logo-white.jpg',
-'blue':'images/logo-blue.jpg',
-'red':'images/logo-red.jpg',
+  'black':'images/logo-black.jpg',
+  'white':'images/logo-white.jpg',
+  'blue':'images/logo-blue.jpg',
+  'red':'images/logo-red.jpg',
 };
-
 
 img.src = colorMap[color] || 'images/logo-black.jpg';
 titleEl.textContent = decodeURIComponent(title);
 
-
-// color buttons update image
 document.querySelectorAll('.color-dot').forEach(btn=>{
-btn.addEventListener('click', ()=>{
-const c = btn.dataset.color;
-img.src = colorMap[c] || img.src;
-})
+  btn.addEventListener('click', ()=>{
+    const c = btn.dataset.color;
+    img.src = colorMap[c] || img.src;
+  })
 });
-</script>
-</body>
 
+const hamb = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+if(hamb){
+  hamb.addEventListener('click', ()=> nav.classList.toggle('open'));
+}
+</script>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© LE TWIN — 2025</div>
+  </div>
+</footer>
+</body>
 </html>
