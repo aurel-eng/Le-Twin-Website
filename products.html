@@ -1,114 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LE TWIN – Products</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <header>
-        <img src="image.jpg" alt="LE TWIN Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <section class="page-header">
-        <h1>Our Collections</h1>
-    </section>
+<!-- FILE: product.html -->
+<div class="container header-inner">
+<a class="brand" href="index.html">LE TWIN</a>
+<nav class="main-nav">
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="logo-based.html">Logo</a>
+<a href="graphics.html">Graphics</a>
+</nav>
+<button class="hamburger" aria-label="Open menu">☰</button>
+</div>
+</header>
 
 
-    <!-- LOGO COLLECTION -->
-    <section id="logo" class="product-section">
-        <h2>Logo-Based Collection</h2>
-        <div class="product-grid">
-
-            <!-- 4 COLORS — use your own images later -->
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Logo Tee — Color 1</h3>
-                <p>Sizes: M / L / XL</p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Logo Tee — Color 2</h3>
-                <p>Sizes: M / L / XL</p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Logo Tee — Color 3</h3>
-                <p>Sizes: M / L / XL</p>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Logo Tee — Color 4</h3>
-                <p>Sizes: M / L / XL</p>
-            </div>
-
-        </div>
-    </section>
+<main class="container product-page">
+<div class="product-left">
+<img id="productImage" src="images/logo-black.jpg" alt="Product">
+</div>
+<div class="product-right">
+<h1 id="productTitle">Product Name</h1>
+<p id="productSubtitle" class="muted">T-shirt — sizes M / L / XL</p>
 
 
-    <!-- GRAPHICS COLLECTION -->
-    <section id="graphics" class="product-section">
-        <h2>Graphics Collection</h2>
+<h4>Colors</h4>
+<div class="color-row">
+<button class="color-dot black" data-color="black" aria-label="Black"></button>
+<button class="color-dot white" data-color="white" aria-label="White"></button>
+<button class="color-dot blue" data-color="blue" aria-label="Blue"></button>
+<button class="color-dot red" data-color="red" aria-label="Red"></button>
+</div>
 
-        <div class="product-grid">
 
-            <!-- 6 GRAPHICS × 3 COLORS (just placeholders for now) -->
-            <!-- Repeat template as needed -->
+<h4 style="margin-top:14px">Sizes</h4>
+<div class="size-row">
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+</div>
 
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Graphic Tee 1</h3>
-                <p>3 Colors — Sizes M / L / XL</p>
-            </div>
 
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Graphic Tee 2</h3>
-                <p>3 Colors — Sizes M / L / XL</p>
-            </div>
+<p class="muted" style="margin-top:14px">No checkout – showcase only. Use this page to show details and colors.</p>
+<a class="sub-cta" id="shareLink" href="#">Share this look</a>
+</div>
+</main>
 
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Graphic Tee 3</h3>
-                <p>3 Colors — Sizes M / L / XL</p>
-            </div>
 
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Graphic Tee 4</h3>
-                <p>3 Colors — Sizes M / L / XL</p>
-            </div>
+<script>
+// Basic client-side logic to pull simple query params and change product text/image
+function qs(name){
+const params = new URLSearchParams(window.location.search);
+return params.get(name);
+}
+const title = qs('name') || 'LE TWIN Tee';
+const color = qs('color') || 'black';
+const img = document.getElementById('productImage');
+const titleEl = document.getElementById('productTitle');
 
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Graphic Tee 5</h3>
-                <p>3 Colors — Sizes M / L / XL</p>
-            </div>
 
-            <div class="product-card">
-                <div class="product-img placeholder"></div>
-                <h3>Graphic Tee 6</h3>
-                <p>3 Colors — Sizes M / L / XL</p>
-            </div>
+// map color -> image file (fallbacks)
+const colorMap = {
+'black':'images/logo-black.jpg',
+'white':'images/logo-white.jpg',
+'blue':'images/logo-blue.jpg',
+'red':'images/logo-red.jpg',
+};
 
-        </div>
-    </section>
 
-    <footer>
-        <p>© 2025 LE TWIN</p>
-    </footer>
+img.src = colorMap[color] || 'images/logo-black.jpg';
+titleEl.textContent = decodeURIComponent(title);
 
+
+// color buttons update image
+document.querySelectorAll('.color-dot').forEach(btn=>{
+btn.addEventListener('click', ()=>{
+const c = btn.dataset.color;
+img.src = colorMap[c] || img.src;
+})
+});
+</script>
 </body>
 </html>

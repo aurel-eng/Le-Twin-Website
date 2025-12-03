@@ -1,37 +1,49 @@
+<!-- FILE: contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LE TWIN – Contact</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LE TWIN — Contact</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="index.html">LE TWIN</a>
+<nav class="main-nav">
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="logo-based.html">Logo</a>
+<a href="graphics.html">Graphics</a>
+</nav>
+<button class="hamburger" aria-label="Open menu">☰</button>
+</div>
+</header>
 
-    <header>
-        <img src="image.jpg" alt="LE TWIN Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <section class="page-header">
-        <h1>Contact Us</h1>
-        <p>Message us for questions or collaborations.</p>
-    </section>
+<main class="container contact-page">
+<h1 class="section-title">Contact</h1>
+<p class="lead">General inquiries, collaborations and wholesale: <strong>letwin@example.com</strong></p>
 
-    <section class="contact-box">
-        <p>Email: <b>support@letwin.com</b></p>
-        <p>Instagram: <b>@le.twin</b></p>
-    </section>
 
-    <footer>
-        <p>© 2025 LE TWIN</p>
-    </footer>
+<form class="contact-form" action="mailto:letwin@example.com" method="get" enctype="text/plain">
+<label>Name<br><input name="name" required></label>
+<label>Email<br><input name="email" type="email" required></label>
+<label>Message<br><textarea name="message" rows="6" required></textarea></label>
+<button class="btn primary" type="submit">Send (opens email)</button>
+</form>
 
+
+<h3 style="margin-top:20px">Physical / Social</h3>
+<p class="muted">Instagram: <a href="https://instagram.com/letwin">@letwin</a> — Reply time 48 hrs.</p>
+</main>
+
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<div class="copyright">© LE TWIN — 2025</div>
+</div>
+</footer>
 </body>
 </html>
