@@ -30,6 +30,20 @@
       object-fit: cover;
       filter: brightness(60%);
     }
+    .about-videos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .about-videos video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+    }
     .hero-text {
       position: absolute;
       top: 50%;
@@ -105,13 +119,25 @@
     </div>
 
   <section>
-    <h2>About Le Twin</h2>
-    <p style="line-height: 1.6; font-size: 18px; text-align: center;">
-      Le Twin is a modern clothing brand focused on bold style, strong identity,
-      and clean aesthetics. Designed for people who want to stand out while
-      staying authentic.
-    </p>
-  </section>
+  <h2>About Le Twin</h2>
+  <p style="line-height: 1.6; font-size: 18px; text-align: center;">
+    Le Twin is a modern clothing brand focused on bold style, strong identity,
+    and clean aesthetics. Designed for people who want to stand out while
+    staying authentic.
+  </p>
+
+  <div class="about-videos">
+    <video controls width="480">
+      <source src="VID-20251030-WA0001.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video controls width="480">
+      <source src="VID-20251030-WA0002.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
 
   <section>
     <h2>Collection</h2>
@@ -134,6 +160,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
