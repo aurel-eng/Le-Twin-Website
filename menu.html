@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>LE TWIN — Menu</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LE TWIN — Menu</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="index.html">LE TWIN</a>
-<nav class="main-nav">
-<a href="index.html">Home</a>
-<a href="logo-based.html">Logo</a>
-<a href="graphics.html">Graphics</a>
-<a href="about.html">About</a>
-</nav>
-<button class="hamburger" aria-label="Open menu">☰</button>
-</div>
-</header>
+  <header class="site-header">
+    <a class="brand" href="index.html">LE TWIN</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="logo-based.html">Logo</a>
+      <a href="graphics.html">Graphics</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger" aria-label="Open menu">☰</button>
+  </header>
 
+  <main class="container">
+    <h2 class="section-title">Menu</h2>
+    <div class="products-grid">
+      <a class="product-card" href="logo-based.html">
+        <h3>Logo-Based Collection</h3>
+        <p>4 Colors — Sizes: M, L, XL</p>
+        <div class="btn">View Collection</div>
+      </a>
 
-<main class="container">
-<h1 class="section-title">Menu</h1>
-<ul class="menu-list">
-<li><a href="logo-based.html">Logo-Based Collection (4 colors)</a></li>
-<li><a href="graphics.html">Graphics Collection (6 designs × 3 colors)</a></li>
-<li><a href="about.html">About LE TWIN</a></li>
-<li><a href="contact.html">Contact & Wholesale</a></li>
-</ul>
-</main>
+      <a class="product-card" href="graphics.html">
+        <h3>Graphics Collection</h3>
+        <p>6 Designs × 3 Colors — Sizes: M, L, XL</p>
+        <div class="btn">View Collection</div>
+      </a>
 
+      <a class="product-card" href="about.html">
+        <h3>About LE TWIN</h3>
+        <p>Our story and vision</p>
+        <div class="btn">Read More</div>
+      </a>
 
-<footer class="site-footer">
-<div class="container footer-inner">
-<div class="copyright">© LE TWIN — 2025</div>
-</div>
-</footer>
+      <a class="product-card" href="contact.html">
+        <h3>Contact & Wholesale</h3>
+        <p>Send us a message</p>
+        <div class="btn">Contact</div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© LE TWIN — 2025</div>
+    </div>
+  </footer>
+
+<script>
+  const hamb = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+  if(hamb){
+    hamb.addEventListener('click', ()=> nav.classList.toggle('open'));
+  }
+</script>
 </body>
-
 </html>
