@@ -1,78 +1,67 @@
-<!-- FILE: graphics.html -->
-<link rel="stylesheet" href="style.css">
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>LE TWIN — Graphics Collection</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LE TWIN — Graphics Collection</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="index.html">LE TWIN</a>
-<nav class="main-nav">
-<a href="index.html">Home</a>
-<a href="menu.html">Menu</a>
-<a href="logo-based.html">Logo</a>
-<a href="about.html">About</a>
-</nav>
-<button class="hamburger" aria-label="Open menu">☰</button>
-</div>
-</header>
+  <header class="site-header">
+    <a class="brand" href="index.html">LE TWIN</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="logo-based.html">Logo</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button class="hamburger" aria-label="Open menu">☰</button>
+  </header>
 
+  <main>
+    <h2 class="section-title">Graphics Collection</h2>
+    <p class="lead">Six unique designs. Each design comes in 3 colors. Sizes: M, L, XL.</p>
 
-<main class="container">
-<h1 class="section-title">Graphics Collection</h1>
-<p class="lead">Six unique designs. Each design comes in 3 colors. Sizes: M, L, XL.</p>
+    <div class="products-grid">
+      <a class="product-card" href="product.html?type=graphic&id=1&name=Graphic+1">
+        <img src="images/graphic1.jpg" alt="Graphic 1">
+        <h3>Graphic 1</h3>
+      </a>
+      <a class="product-card" href="product.html?type=graphic&id=2&name=Graphic+2">
+        <img src="images/graphic2.jpg" alt="Graphic 2">
+        <h3>Graphic 2</h3>
+      </a>
+      <a class="product-card" href="product.html?type=graphic&id=3&name=Graphic+3">
+        <img src="images/graphic3.jpg" alt="Graphic 3">
+        <h3>Graphic 3</h3>
+      </a>
+      <a class="product-card" href="product.html?type=graphic&id=4&name=Graphic+4">
+        <img src="images/graphic4.jpg" alt="Graphic 4">
+        <h3>Graphic 4</h3>
+      </a>
+      <a class="product-card" href="product.html?type=graphic&id=5&name=Graphic+5">
+        <img src="images/graphic5.jpg" alt="Graphic 5">
+        <h3>Graphic 5</h3>
+      </a>
+      <a class="product-card" href="product.html?type=graphic&id=6&name=Graphic+6">
+        <img src="images/graphic6.jpg" alt="Graphic 6">
+        <h3>Graphic 6</h3>
+      </a>
+    </div>
+  </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© LE TWIN — 2025</div>
+    </div>
+  </footer>
 
-<div class="products-grid">
-<!-- 6 designs, link to product.html with query string -->
-<a class="card product" href="product.html?type=graphic&id=1&name=Graphic+1">
-<img src="images/graphic1.jpg" alt="Graphic 1">
-<div class="card-body"><strong>Graphic 1</strong></div>
-</a>
-
-
-<a class="card product" href="product.html?type=graphic&id=2&name=Graphic+2">
-<img src="images/graphic2.jpg" alt="Graphic 2">
-<div class="card-body"><strong>Graphic 2</strong></div>
-</a>
-
-
-<a class="card product" href="product.html?type=graphic&id=3&name=Graphic+3">
-<img src="images/graphic3.jpg" alt="Graphic 3">
-<div class="card-body"><strong>Graphic 3</strong></div>
-</a>
-
-
-<a class="card product" href="product.html?type=graphic&id=4&name=Graphic+4">
-<img src="images/graphic4.jpg" alt="Graphic 4">
-<div class="card-body"><strong>Graphic 4</strong></div>
-</a>
-
-
-<a class="card product" href="product.html?type=graphic&id=5&name=Graphic+5">
-<img src="images/graphic5.jpg" alt="Graphic 5">
-<div class="card-body"><strong>Graphic 5</strong></div>
-</a>
-
-
-<a class="card product" href="product.html?type=graphic&id=6&name=Graphic+6">
-<img src="images/graphic6.jpg" alt="Graphic 6">
-<div class="card-body"><strong>Graphic 6</strong></div>
-</a>
-</div>
-</main>
-
-
-<footer class="site-footer">
-<div class="container footer-inner">
-<div class="copyright">© LE TWIN — 2025</div>
-</div>
-</footer>
+<script>
+  const hamb = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+  if(hamb){
+    hamb.addEventListener('click', ()=> nav.classList.toggle('open'));
+  }
+</script>
 </body>
-
 </html>
