@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Twin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0f24; /* dark blue */
+      color: #ddd;
+    }
+    header {
+      background: #050a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    .hero-video {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+    }
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+      text-shadow: 0 0 15px rgba(0,0,0,0.8);
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 30px;
+      color: #fff;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 330px;
+      border: 2px solid #111;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      color: #fff;
+    }
+    .contact a {
+      color: #4da3ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer {
+      background: #050a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .logo {
+      width: 120px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="logo.png" alt="Le Twin Logo" />
+    Le Twin
+  </header>
+
+  <div class="hero-video">
+      <video autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-text">Streetwear. Identity. Le Twin.</div>
+    </div>
+
+  <section>
+    <h2>About Le Twin</h2>
+    <p style="line-height: 1.6; font-size: 18px; text-align: center;">
+      Le Twin is a modern clothing brand focused on bold style, strong identity,
+      and clean aesthetics. Designed for people who want to stand out while
+      staying authentic.
+    </p>
+  </section>
+
+  <section>
+    <h2>Collection</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80" />
+      <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80" />
+      <img src="https://images.unsplash.com/photo-1521337706260-62e1c68d0d59?auto=format&fit=crop&w=600&q=80" />
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" />
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Instagram: <a href="#">@letwin.official</a></p>
+    <p>Email: <a href="mailto:contact@letwin.com">contact@letwin.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 Le Twin — All Rights Reserved
+  </footer>
+</body>
+</html>
